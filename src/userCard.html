@@ -1,0 +1,23 @@
+<h3 *if="user">{{upperWords(user.name.first + ' ' + user.name.last)}}</h3>
+
+<div class="user-card">
+    <div [hidden]="!loading">
+        <content select="[loading]"></content>
+    </div>
+    <div [hidden]="loading">
+        <div [hidden]="user" class="no-user">
+            <content select="[no-user]"></content>
+        </div>
+        <div *if="user">
+            <div class="user-avatar-container">
+                <img [src]="user.picture.medium" alt="User Avatar" />
+            </div>
+
+            <div class="user-properties">
+                <div *for="#prop of properties">
+                    <strong>{{prop.title}}:</strong> {{prop.getVal(user)}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
