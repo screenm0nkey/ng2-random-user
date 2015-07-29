@@ -1,14 +1,13 @@
-import {Component, Template, bootstrap, If} from 'angular2/angular2';
-import {UserCard} from 'user-card';
-import {RandomUser} from 'RandomUser';
+import {View, Component} from 'angular2/angular2';
+import {RandomUser} from 'randomUser';
+
 
 @Component({
-  selector: 'main',
-  services: [RandomUser]
+    selector: 'main',
+    services: [RandomUser]
 })
-@Template({
-  directives: [UserCard],
-  inline: `
+@View({
+    template: `
     <div class="new-user-button">
       <button class="ru-button --primary" autofocus (click)="getRandomUser()">
         <i class="fa fa-user"></i>
@@ -25,19 +24,19 @@ import {RandomUser} from 'RandomUser';
     </user-card>
   `
 })
+
 export class App {
-  constructor(randomUser:RandomUser) {
-    this.buttonText = 'Get New User';
-    this.getUser = randomUser.getUser;
-  }
+    constructor(randomUser: RandomUser) {
+        this.buttonText = 'Get New User';
+        this.getUser = randomUser.getUser;
+    }
 
-  getRandomUser() {
-    this.loading = true;
-    this.getUser().then(user => {
-      this.user = user;
-      this.loading = false;
-    }).catch(() => this.loading = false);
-  }
+    getRandomUser () {
+        this.loading = true;
+        this.getUser().then(user => {
+            console.log(user)
+            this.user = user;
+            this.loading = false;
+        }).catch(() => this.loading = false);
+    }
 }
-
-bootstrap(App);

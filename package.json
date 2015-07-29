@@ -17,23 +17,31 @@
     "connect": "^3.3.4",
     "del": "~1.1.1",
     "gulp": "~3.8.10",
-    "gulp-concat": "~2.5.0",
-    "gulp-gh-pages": "^0.5.0",
     "gulp-plumber": "^1.0.0",
     "gulp-rename": "~1.2.0",
+    "gulp-size": "^1.2.1",
     "gulp-traceur": "0.17.*",
+    "mkpath": "~0.1.0",
     "open": "0.0.5",
+    "rework": "~1.0.1",
+    "rework-npm": "~1.0.0",
     "serve-static": "~1.8.1",
-    "through2": "~0.6.3",
-    "faker": "2.1.2"
+    "systemjs-builder": "^0.10.3",
+    "through2": "~0.6.3"
   },
   "dependencies": {
-    "angular2": "2.0.0-alpha.18",
+    "angular2": "2.0.0-alpha.21",
+    "bootstrap": "~3.3.4",
+    "es6-module-loader": "0.16.5",
+    "jwt-decode": "~1.1.0",
+    "systemjs": "~0.16.10",
+    "whatwg-fetch": "~0.7.0",
+    "when": "~3.7.3",
     "axios": "^0.5.2",
-    "es6-module-loader": "~0.11.0",
     "font-awesome": "^4.3.0",
-    "moment": "^2.9.0",
-    "systemjs": "~0.11.0",
-    "zone.js": "0.4.1"
+    "moment": "^2.9.0"
   }
 }
+
+
+
