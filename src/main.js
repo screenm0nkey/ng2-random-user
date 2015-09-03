@@ -1,6 +1,6 @@
 import {View, Component} from 'angular2/angular2';
-import {RandomUser} from 'randomUser';
-import {UserCard} from 'userCard';
+import {RandomUser} from 'randomUserService';
+import {UserCard} from 'userCardDirective';
 
 
 @Component({
